@@ -33,17 +33,6 @@ O **Cellara** propõe um protótipo de baixo custo que utiliza um sensor LDR aco
 - **Visualização e relatórios** — energia gerada vs. esperada, perdas acumuladas, histórico e comparação entre painéis;
 
 
-## 🔄 Fluxo do sistema
-
-```mermaid
-flowchart LR
-    A[Sensor LDR] --> B[Arduino Uno]
-    C[Inversor do painel] --> B
-    B -->|Wi-Fi| D[Servidor local]
-    D -->|Wi-Fi| E[Servidor remoto / nuvem]
-    E --> F[Dashboard web]
-    E --> G[Alertas SMS / e-mail]
-```
 
 ## 🚧 Status do projeto
 
