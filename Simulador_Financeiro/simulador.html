@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador Financeiro</title>
+    <link rel="stylesheet" href="simulador.css" />
+    <script src="simulador.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <div class="card">
+        <h2>Simulador de Eficiência <span>Solar</span></h2>
+        <div class="content">
+          <div class="field">
+            <label>Insira a potência de cada painel (Wp)</label>
+            <input
+              type="number"
+              id="ipt_potencia_painel"
+              placeholder="ex: 550"
+            />
+            <span id="info">
+              <a href=""><img src="assets/info.svg" /></a>
+              Na ausência do valor, será usado o valor padrão do mercado de
+              550Wp
+            </span>
+          </div>
+          <div class="field">
+            <label>Insira a quantidade de painéis solares <span>*</span></label>
+            <input type="number" id="ipt_qtd_painel" placeholder="ex: 450" />
+          </div>
+          <div class="field">
+            <label>Selecione a sua região das instalações <span>*</span></label>
+            <select id="slt_regiao">
+              <option value="" selected disabled>Selecione uma opção</option>
+              <option value="norte">Norte</option>
+              <option value="nordeste">Nordeste</option>
+              <option value="centroOeste">Centro oeste</option>
+              <option value="sudeste">Sudeste</option>
+              <option value="sul">Sul</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Selecione o ambiente das instalações <span>*</span></label>
+            <select id="slt_ambiente">
+              <option value="" selected disabled>Selecione uma opção</option>
+              <option value="rural">Área Rural - Isolada</option>
+              <option value="rodovia">Próximo de Rodovias ou Indústrias</option>
+              <option value="urbanoBaixa">
+                Zona Urbana de Baixa Densidade
+              </option>
+              <option value="urbanoAlta">
+                Zona Urbana de Alta Densidade / Industrial
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <button onclick="simular()">Simular</button>
+
+        <div id="divResult">
+          <p id="pMessage"></p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
