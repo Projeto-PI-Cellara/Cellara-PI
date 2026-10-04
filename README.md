@@ -36,9 +36,7 @@ O **Cellara** propõe um protótipo de baixo custo que utiliza um sensor LDR aco
 
 ## 🚧 Status do projeto
 
-🚧 **Em desenvolvimento.** Este é um projeto acadêmico (São Paulo Tech School — Ciência da Computação, 2026), atualmente em fase de definição de escopo e arquitetura. Ainda não há funcionamento completo, testes ou guia de instalação — este README será atualizado conforme o projeto avançar.
+🚧 **Em desenvolvimento.** Este é um projeto acadêmico. Ainda não há funcionamento completo, testes ou guia de instalação — este README será atualizado conforme o projeto avançar.
 
-## 👥 Equipe
 
-Grupo 2 — São Paulo Tech School — Ciência da Computação
 
