@@ -37,7 +37,8 @@
         <div class="topico">
           <h3>04 - Ação</h3>
           <hr>
-          <p>Com essas informações, o responsável consegue decidir as ações necessárias e que convém com as identificações</p>
+          <p>Com essas informações, o responsável consegue decidir as ações necessárias e que convém com as
+            identificações</p>
         </div>
       </div>
       <div class="espaco-direito">
@@ -45,53 +46,60 @@
         <h4 class="legenda">Imagem ilustrativa do Dashboard</h4>
       </div>
     </div>
-    <div class="card-simulador">
-      <h2>Simulador de Eficiência <span>Solar</span></h2>
-      <div class="content">
-        <div class="field">
-          <label>Insira a potência de cada painel (Wp)</label>
-          <input type="number" id="ipt_potencia_painel" placeholder="ex: 550" />
-          <span id="info">
-            <a href=""><img src="assets/info.svg" /></a>
-            Na ausência do valor, será usado o valor padrão do mercado de
-            550Wp
-          </span>
+    <div id="secao-simulador">
+      <div class="card-simulador">
+        <h2>Simulador de Eficiência <span>Solar</span></h2>
+        <div class="content">
+          <div class="field">
+            <label>Insira a potência de cada painel (Wp)</label>
+            <input type="number" id="ipt_potencia_painel" placeholder="ex: 550" />
+            <span id="info">
+              <a href=""><img src="assets/info.svg" /></a>
+              Na ausência do valor, será usado o valor padrão do mercado de
+              550Wp
+            </span>
+          </div>
+          <div class="field">
+            <label>Insira a quantidade de painéis solares <span>*</span></label>
+            <input type="number" id="ipt_qtd_painel" placeholder="ex: 450" />
+          </div>
+          <div class="field">
+            <label>Selecione a sua região das instalações <span>*</span></label>
+            <select id="slt_regiao">
+              <option value="" selected disabled>Selecione uma opção</option>
+              <option value="norte">Norte</option>
+              <option value="nordeste">Nordeste</option>
+              <option value="centroOeste">Centro oeste</option>
+              <option value="sudeste">Sudeste</option>
+              <option value="sul">Sul</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Selecione o ambiente das instalações <span>*</span></label>
+            <select id="slt_ambiente">
+              <option value="" selected disabled>Selecione uma opção</option>
+              <option value="rural">Área Rural - Isolada</option>
+              <option value="rodovia">Próximo de Rodovias ou Indústrias</option>
+              <option value="urbanoBaixa">
+                Zona Urbana de Baixa Densidade
+              </option>
+              <option value="urbanoAlta">
+                Zona Urbana de Alta Densidade / Industrial
+              </option>
+            </select>
+          </div>
         </div>
-        <div class="field">
-          <label>Insira a quantidade de painéis solares <span>*</span></label>
-          <input type="number" id="ipt_qtd_painel" placeholder="ex: 450" />
-        </div>
-        <div class="field">
-          <label>Selecione a sua região das instalações <span>*</span></label>
-          <select id="slt_regiao">
-            <option value="" selected disabled>Selecione uma opção</option>
-            <option value="norte">Norte</option>
-            <option value="nordeste">Nordeste</option>
-            <option value="centroOeste">Centro oeste</option>
-            <option value="sudeste">Sudeste</option>
-            <option value="sul">Sul</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Selecione o ambiente das instalações <span>*</span></label>
-          <select id="slt_ambiente">
-            <option value="" selected disabled>Selecione uma opção</option>
-            <option value="rural">Área Rural - Isolada</option>
-            <option value="rodovia">Próximo de Rodovias ou Indústrias</option>
-            <option value="urbanoBaixa">
-              Zona Urbana de Baixa Densidade
-            </option>
-            <option value="urbanoAlta">
-              Zona Urbana de Alta Densidade / Industrial
-            </option>
-          </select>
+
+        <button onclick="simular()">Simular</button>
+
+        <div id="divResult">
+          <p id="pMessage"></p>
         </div>
       </div>
-
-      <button onclick="simular()">Simular</button>
-
-      <div id="divResult">
-        <p id="pMessage"></p>
+      <div class="explicacao-simulador">
+        <h1>Descubra quanto você pode estar PERDENDO!</h1>
+        <p class="texto-grande">Informe poucos dados e faça uma simulação do impacto que a sujeira pode estar causando na geração de energia
+          da sua usina solar.</p>
       </div>
     </div>
   </main>
