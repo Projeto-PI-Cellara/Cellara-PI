@@ -72,7 +72,8 @@ label span {
   color: #ff0000;
 }
 
-input, select {
+input,
+select {
   padding: 8px;
   box-sizing: border-box;
   width: 100%;
@@ -99,7 +100,7 @@ button {
 
 .resultSimulation span {
   font-weight: bold;
-} 
+}
 
 .resultSimulation .geracao {
   color: var(--azul-primaria);
@@ -134,6 +135,74 @@ button {
   font-size: 16px;
 }
 
+
+
+#secao_hero {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 1000px;
+  align-items: center;
+  background-color: var(--azul-primaria);
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 30px;
+  padding: 0px 100px;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#titulo-hero {
+  display: flex;
+  width: 100%;
+  font-family: "League Spartan";
+  font-size: 96px;
+  font-weight: bold;
+  color: var(--branco);
+  text-shadow: 0px 4px 6.5px rgba(0, 0, 0, 0.77);
+}
+
+#paragrafo-hero {
+  display: flex;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--branco);
+  text-shadow: 0px 4px 6.5px rgba(0, 0, 0, 0.77);
+}
+
+#btn-simular {
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: var(--amarelo-secundaria);
+  padding: 20px;
+  border-radius: 15px;
+  color: var(--preto-suporte);
+}
+
+#btn-conheca {
+  display: flex;
+  background-color: var(--branco);
+  padding: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--preto-suporte);
+  justify-content: center;
+  border-radius: 15px;
+}
+
 #secao-como-funciona {
   display: flex;
   flex-direction: row;
@@ -166,7 +235,7 @@ button {
 
 .titulo h2 {
   width: 100%;
-  
+
   color: var(--branco);
   text-align: left;
   font-family: "League Spartan";
@@ -185,7 +254,7 @@ button {
 
 .topico h3 {
   width: 100%;
-  
+
   text-align: left;
   color: var(--amarelo-secundaria);
   font-family: "League Spartan";
@@ -197,7 +266,7 @@ button {
 
 .topico p {
   width: 100%;
-  
+
   color: var(--branco);
   text-align: left;
   font-family: "League Spartan";
