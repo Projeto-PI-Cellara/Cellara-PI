@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --branco: #F8F9FA;
+  --preto: #000000;
+  --azul-primaria: #2B3B92;
+  --azul-secundaria: #4A58A2;
+  --amarelo-secundaria: #FFD700;
+  --preto-suporte: #1C1C1C;
+  /* --cinza-suporte: #363636; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--branco);
+}
+
+
+
+/* ELEMENTOS COMUNS */
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* TEXTOS */
+
+.titulo-hero {
+  font-family: "League Spartan";
+  font-size: 96px;
+  font-weight: bold;
+  color: var(--branco);
+  text-shadow: 0px 4px 6.5px rgba(0, 0, 0, 0.77);
+}
+
+.subtitulo-hero {
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--branco);
+  text-shadow: 0px 4px 6.5px rgba(0, 0, 0, 0.77);
+}
+
+.titulo-conteudo {
+  font-family: "League Spartan";
+  font-size: 48px;
+  color: var(--branco);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.titulo-topico {
+  font-family: "League Spartan";
+  font-weight: normal;
+  font-size: 32px;
+  color: var(--amarelo-secundaria);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.paragrafo-conteudo {
+  font-family: "League Spartan";
+  font-weight: normal;
+  font-size: 26px;
+  color: var(--branco);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.titulo-simulador {
+  padding-bottom: 20px;
+
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--azul-primaria);
+  text-align: center;
+}
+
+.rotulo-input-simulador {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: var(--azul-primaria);
+}
+
+.input-obrigatorio {
+  color: #ff0000;
+}
+
+.anuncio-simulador {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 50px;
+
+  width: 50%;
+  height: inherit;
+
+  padding: 100px;
+}
+
+.titulo-anuncio {
+  font-size: 64px;
+  font-family: "Open Sans", sans-serif;
+  color: var(--branco);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.paragrafo-anuncio {
+  font-size: 32px;
+  font-family: "Open Sans", sans-serif;
+  color: var(--branco);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* SEÇÃO HERO */
+
+.secao-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 30px;
+
+  height: 1000px;
+  padding: 0 100px;
+  background-color: var(--azul-primaria);
+}
+
+.botoes-hero {
+  display: flex;
+  column-gap: 20px;
+}
+
+#btn-hero-simulador {
+  padding: 20px;
+  background-color: var(--amarelo-secundaria);
+  border-radius: 15px;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--preto-suporte);
+}
+
+#btn-hero-sobre-projeto {
+  padding: 20px;
+  background-color: var(--branco);
+  border-radius: 15px;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--preto-suporte);
+}
+
+
+
+/* SEÇÃO SOBRE O PROJETO */
+
+.secao-sobre-projeto {
+  display: flex;
+  justify-content: space-between;
+}
+
+.corte-lateral {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 50px;
+
+  width: 712px;
+  padding: 120px 50px;
+  background-color: var(--azul-primaria);
+  box-shadow: inset -90px 0 90px -90px rgba(0, 0, 0, 0.5);
+}
+
+.topico-corte {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+}
+
+.imagem-legendada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+
+  width: 100%;
+}
+
+#dashboard-ilustrativo {
+  width: 1000px;
+  height: 562px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 1);
+}
+
+.legenda {
+  font-size: 24px;
+  font-family: "League Spartan";
+  font-weight: normal;
+  color: var(--preto-suporte);
+}
+
+
+
+
+/* SEÇÃO SIMULADOR FINANCEIRO */
+
+.secao-simulador {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 50px;
+
+  height: 900px;
+  padding: 50px 100px;
+  background-color: var(--azul-secundaria);
+}
+
+.card-simulador {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  width: 60%;
+  height: 100%;
+  padding: 20px 30px;
+  background-color: var(--branco);
+  border-radius: 30px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.frame-inputs-simulador {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.input-simulador {
+  padding: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px var(--azul-primaria);
+  background-color: var(--branco);
+}
+
+#btn-simulador {
+  padding: 10px;
+  background-color: var(--azul-primaria);
+
+  font-weight: bold;
+  color: var(--branco);
+}
+
+#info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  margin-top: 5px;
+
+  font-size: 14px;
+}
+
+#info img {
+  width: 20px;
+}
+
+.area-resultado-simulador {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  border-radius: 5px;
+}
+
+.cabecalho-resultado-simulador {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card-resultado-simulador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  background-color: var(--azul-primaria);
+  padding: 10px 5px;
+  border-radius: 5px;
+
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--branco);
+}
+
+#msg_resultado_simulador {
+  color: #ff0000;
+  text-align: center;
+}
+
+.conteudo-resultado-simulador {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding-top: 10px;
+}
+
+.area-resultado-simulador .geracao {
+  font-weight: bold;
+  color: var(--azul-primaria);
+}
+
+.area-resultado-simulador .perda {
+  font-weight: bold;
+  color: #ff0000;
+}

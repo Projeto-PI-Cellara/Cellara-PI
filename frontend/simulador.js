@@ -70,24 +70,24 @@ function simular() {
     let impactoFinanceiroAnual = impactoFinanceiroMensal * 12;
     let perdaPercentual = perdaMedia * 100;
 
-    divResult.innerHTML = `
-      <div class="resultSimulation">
-        <div class="resultHeader">
-          <div class="resultCard">
+    resultado_simulador.innerHTML = `
+      <div class="area-resultado-simulador">
+        <div class="cabecalho-resultado-simulador">
+          <div class="card-resultado-simulador">
             <span>Geração diária estimada</span>
             <span>${geracaoRealMedia.toFixed(2)} kWh</span>
           </div>
-          <div class="resultCard">
+          <div class="card-resultado-simulador">
             <span>Perda estimada por sujeira</span>
             <span>${perdaPercentual.toFixed(2)}%</span>
           </div>
-          <div class="resultCard">
+          <div class="card-resultado-simulador">
             <span>Impato financeiro mensal</span>
             <span>R$ ${impactoFinanceiroMensal.toFixed(2)}</span>
           </div>
         </div>
 
-        <div>
+        <div class="conteudo-resultado-simulador">
             <p>
               Com base nos dados informados, sua usina possui uma potência total instalada de
               <span class="geracao">${potenciaTotalKwp.toFixed(2)} kWp</span> e uma geração diária de referência
@@ -120,5 +120,5 @@ function simular() {
       </div>
     `;
   }
-  pMessage.innerHTML = mensagem;
+  msg_resultado_simulador.innerHTML = mensagem;
 }
