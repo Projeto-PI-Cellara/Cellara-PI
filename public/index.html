@@ -4,40 +4,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cellara - Site Institucional</title>
-  <link rel="stylesheet" href="site_institucional.css" />
-  <script src="simulador.js" defer></script>
+  <title>Cellara</title>
+  <link rel="shortcut icon" href="assets/img/logoSemFundo.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/simulador.css" />
+  <script src="js/simulador.js" defer></script>
 </head>
 
 <body>
   <header>
-    <img src="logo-header.png" alt="logo-header" id="img_logo_header">
+    <img src="assets/img/logo-texto-dark.png" alt="logo-header" id="img_logo_header">
     <div class="menu-superior">
-      <a class="link-menu" href="#">Início</a>
-      <a class="link-menu" href="#">Contexto</a>
-      <a class="link-menu" href="#">Sobre o projeto</a>
-      <a class="link-menu" href="#">Simulador financeiro</a>
+      <a class="link-menu" href="#inicio">Início</a>
+      <a class="link-menu" href="#desafio">Desafio atual</a>
+      <a class="link-menu" href="#sobre-projeto">Sobre o projeto</a>
+      <a class="link-menu" href="#simulador">Simulador</a>
       <a class="link-menu" href="#">Sobre nós</a>
-      <button id="btn_header_login">Acessar o sistema</button>
+      <button id="btn_header_login"><img src="assets/icons/icon-log-in.svg" alt="" />Entrar</button>
     </div>
   </header>
   <main>
 
-    <div class="secao-hero">
-      <img id="img_fundo_hero" src="fundo-hero.png" alt="">
+    <div class="secao-hero" id="inicio">
+      <img id="img_fundo_hero" src="assets/img/fundo-hero.png" alt="">
       <div class="conteudo-hero">
         <h1 class="titulo-hero">Maximizando seu aproveitamento de energia solar</h1>
         <h2 class="subtitulo-hero">Uma solução tecnológica para auxiliar empresas com usinas solares em análise de
           aproveitamento ideal de energia gerada.</h2>
         <hr>
         <div class="botoes-hero">
-          <button id="btn-hero-simulador">Simule aqui</button>
           <button id="btn-hero-sobre-projeto">Conheça o Projeto</button>
+          <button id="btn-hero-simulador">Simule aqui</button>
         </div>
       </div>
     </div>
 
-    <div class="secao-sobre-projeto">
+    <div class="secao-sobre-projeto" id="sobre-projeto">
       <div class="corte-lateral">
         <h2 class="titulo-conteudo">Como funciona o projeto?</h2>
         <div class="topico-corte">
@@ -65,33 +67,36 @@
         </div>
       </div>
       <div class="imagem-legendada">
-        <img id="dashboard-ilustrativo" src="dashboard_ilustrativo.png">
+        <img id="dashboard-ilustrativo" src="assets/img/img-dashboard.png">
         <p class="legenda">Imagem ilustrativa do Dashboard</p>
       </div>
     </div>
 
-    <div class="secao-simulador">
-      <div class="card-simulador">
-        <h2 class="titulo-simulador">Simulador de Eficiência <span class="span-simulador">Solar</span></h2>
+    <div class="secao-simulador" id="simulador">
 
-        <div class="frame-inputs-simulador">
-          <div class="area-input-simulador">
-            <label class="rotulo-input-simulador">Insira a potência de cada painel (Wp)</label>
-            <input class="input-simulador" type="number" id="ipt_potencia_painel" placeholder="ex: 550" />
+      <div class="card">
+        <h2>Simulador de Eficiência <span>Solar</span></h2>
+        <div class="content">
+          <div class="field">
+            <label>Insira a potência de cada painel (Wp)</label>
+            <input
+              type="number"
+              id="ipt_potencia_painel"
+              placeholder="ex: 550"
+            />
             <span id="info">
-              <a href=""><img src="assets/info.svg" /></a>
-              Na ausência do valor, será usado o valor padrão do mercado de 550Wp
+              <a href=""><img src="assets/icons/icon-info-dark.svg" /></a>
+              Na ausência do valor, será usado o valor padrão do mercado de
+              550Wp
             </span>
           </div>
-          <div class="area-input-simulador">
-            <label class="rotulo-input-simulador">Insira a quantidade de painéis solares <span
-                class="input-obrigatorio">*</span></label>
-            <input class="input-simulador" type="number" id="ipt_qtd_painel" placeholder="ex: 450" />
+          <div class="field">
+            <label>Insira a quantidade de painéis solares <span>*</span></label>
+            <input type="number" id="ipt_qtd_painel" placeholder="ex: 450" />
           </div>
-          <div class="area-input-simulador">
-            <label class="rotulo-input-simulador">Selecione a sua região das instalações <span
-                class="input-obrigatorio">*</span></label>
-            <select class="input-simulador" id="slt_regiao">
+          <div class="field">
+            <label>Selecione a sua região das instalações <span>*</span></label>
+            <select id="slt_regiao">
               <option value="" selected disabled>Selecione uma opção</option>
               <option value="norte">Norte</option>
               <option value="nordeste">Nordeste</option>
@@ -100,10 +105,9 @@
               <option value="sul">Sul</option>
             </select>
           </div>
-          <div class="area-input-simulador">
-            <label class="rotulo-input-simulador">Selecione o ambiente das instalações <span
-                class="input-obrigatorio">*</span></label>
-            <select class="input-simulador" id="slt_ambiente">
+          <div class="field">
+            <label>Selecione o ambiente das instalações <span>*</span></label>
+            <select id="slt_ambiente">
               <option value="" selected disabled>Selecione uma opção</option>
               <option value="rural">Área Rural - Isolada</option>
               <option value="rodovia">Próximo de Rodovias ou Indústrias</option>
@@ -117,25 +121,29 @@
           </div>
         </div>
 
-        <button id="btn-simulador" onclick="simular()">Simular</button>
-
-        <div id="resultado_simulador">
-          <p id="msg_resultado_simulador"></p>
+        <button onclick="simular()">Simular</button>
+        
+        <div id="divResult">
+          <p id="pMessage"></p>
         </div>
       </div>
 
       <div class="anuncio-simulador">
-        <h2 class="titulo-anuncio">Descubra quanto você pode estar PERDENDO!</h1>
-          <p class="paragrafo-anuncio">Informe poucos dados e faça uma simulação do impacto que a sujeira pode estar
+        <h2 class="titulo-anuncio">
+          Descubra quanto você pode estar
+          <span id="cta">PERDENDO!</span>
+        </h2>
+        <p class="paragrafo-anuncio">Informe poucos dados e faça uma simulação do impacto que a sujeira pode estar
             causando na geração de energia da sua usina solar.</p>
       </div>
     </div>
   </main>
+
   <footer>
     <div class="secao-footer">
       <div class="inicio_rodape">
         <div id="img-cellara">
-          <img src="Vector(1) 1.png" alt="Logo da Empresa">
+          <img src="assets/img/logo-light.png" alt="Logo da Empresa">
         </div>
         <hr id="linha">
       </div>
@@ -145,12 +153,12 @@
         <h2 class="titulo">SUPORTE</h2>
 
         <div class="item_footer">
-          <img class="img_footer" src="image 12.png" alt="Logo do WhatsApp">
+          <img class="img_footer" src="assets/icons/icon-whatsapp.png" alt="Logo do WhatsApp">
           <p class="info_contato">(11) 99999-9999</p>
         </div>
 
         <div class="item_footer">
-          <img class="img_footer" src="image 13.png" alt="Logo do WhatsApp">
+          <img class="img_footer" src="assets/icons/icon-email.png">
           <p class="info_contato">atendimento@cellara.com</p>
         </div>
       </div>
@@ -159,7 +167,7 @@
         <h2 class="titulo">OUVIDORIA</h2>
 
         <div class="item_footer">
-          <img class="img_footer" src="image 13.png" alt="Logo do WhatsApp">
+          <img class="img_footer" src="assets/icons/image 13.png" alt="Logo do WhatsApp">
           <p class="info_contato">ouvidoria@cellara.com</p>
         </div>
       </div>
@@ -167,7 +175,7 @@
       <div class="redes_sociais">
         <h2 class="titulo">REDES SOCIAIS</h2>
         <div class="item_footer">
-          <img id="img_footer_redes" src="Protótipo do site - Cellara(2) 1.png" alt="Logo do WhatsApp">
+          <img id="img_footer_redes" src="assets/Protótipo do site - Cellara(2) 1.png" alt="Logo do WhatsApp">
         </div>
       </div>
       <p id="direitos_autorais">

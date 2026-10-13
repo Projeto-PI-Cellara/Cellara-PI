@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --preto: #000000;
+  --branco: #FFFFFF;
+  --primaria: #2B3B92;
+  --secundaria:  #F8F9FA;
+  --destaque: #FFD700;
+  --preto-suporte: #1C1C1C;
+}
+
+h2 {
+  text-align: center;
+  gap: 10px;
+  color: var(--primaria);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  /* background-color: var(--branco); */
+  padding: 30px;
+  width: 70%;
+  /* height: fit-content; */
+  border-radius: 10px;
+  border: solid var(--primaria) 2px;
+  box-shadow: 10px 10px 10px #808080;
+  gap: 25px;
+}
+
+.card .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+#info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+  font-size: 14px;
+  color: var(--primaria);
+}
+
+#info img {
+  width: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: var(--primaria);
+}
+
+label span {
+  color: var(--destaque);
+}
+
+input, select {
+  padding: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px var(--primaria);
+}
+
+button {
+  background-color: var(--primaria);
+  color: var(--secundaria);
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.resultSimulation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 5px;
+  color: var(--primaria);
+  font-weight: 600;
+}
+
+.resultSimulation span {
+  font-weight: bold;
+} 
+
+.resultSimulation .geracao {
+  color: var(--destaque);
+}
+
+.resultSimulation .perda {
+  color: #ff2424;
+}
+
+
+#pMessage {
+  color: var(--destaque);
+  text-align: center;
+  font-weight: bold;
+}
+
+.resultHeader {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.resultCard {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: var(--primaria);
+  align-items: center;
+  padding: 10px 5px;
+  border-radius: 5px;
+  color: var(--secundaria);
+  font-weight: bold;
+  font-size: 14px;
+}
