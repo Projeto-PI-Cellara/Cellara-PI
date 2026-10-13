@@ -8,6 +8,8 @@
   --amarelo-secundaria: #FFD700;
   --preto-suporte: #1C1C1C;
   /* --cinza-suporte: #363636; */
+
+  --azul-primaria-transparente: #2B3B92B3;
 }
 
 * {
@@ -23,8 +25,6 @@ body {
 main {
   display: flex;
   flex-direction: column;
-
-  background-color: var(--branco);
 }
 
 
@@ -39,6 +39,14 @@ button {
 
 
 /* TEXTOS */
+
+.link-menu {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--preto-suporte)
+}
 
 .titulo-hero {
   font-family: "League Spartan";
@@ -127,9 +135,70 @@ button {
 }
 
 
+/* HEADER */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 99;
+  position: fixed;
+  padding: 10px 50px;
+  width: 100%;
+  background-color: var(--branco);
+  box-shadow: 0 4px 70px -6px rgba(0,0,0,0.64);
+}
+
+#img_logo_header {
+  width: 200px;
+  height: fit-content;
+}
+
+.menu-superior {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+
+  padding: 10px 0;
+}
+
+#btn_header_login {
+  padding: 10px;
+  background-color: var(--azul-primaria);
+  border-radius: 10px;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--branco);
+
+  box-shadow: 0 4px 4px rgba(0,0,0,0.5);
+}
+
+
 /* SEÇÃO HERO */
 
 .secao-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+#img_fundo_hero {
+  position: absolute;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.conteudo-hero {
+  position: relative;
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -137,7 +206,7 @@ button {
 
   height: 1000px;
   padding: 0 100px;
-  background-color: var(--azul-primaria);
+  background-color: var(--azul-primaria-transparente);
 }
 
 .botoes-hero {
