@@ -405,3 +405,85 @@ header {
   font-weight: bold;
   color: #ff0000;
 }
+
+/*SEÇÃO FOOTER*/
+
+.secao-footer {
+  background-color: var(--preto-suporte);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px;
+}
+
+#img-cellara {
+  display: flex;
+  height: 51px;
+}
+
+.inicio_rodape{
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+#linha {
+  width: 101%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.suporte {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ouvidoria {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.redes_sociais {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.titulo {
+  color: var(--branco);
+  font-size: 24px;
+  font-family: "League Spartan";
+}
+
+.item_footer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.img_footer {
+  display: flex;
+  width: 20px;
+  height: fit-content;
+}
+
+#img_footer_redes{
+  display: flex;
+  width: 161px;
+  height: fit-content;
+}
+
+.info_contato{
+  color: var(--branco);
+  font-size: 20px;
+  font-family: "League Spartan";
+}
+
+#direitos_autorais{
+  font-weight: bold;
+  font-family: "League Spartan";
+  font-size: 20px;
+  color: var(--branco);
+}
