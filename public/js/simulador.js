@@ -71,17 +71,17 @@ function simular() {
     let perdaPercentual = perdaMedia * 100;
 
     divResult.innerHTML = `
-      <div class="resultSimulation">
-        <div class="resultHeader">
-          <div class="resultCard">
+      <div class="resultado">
+        <div class="dados_rapidos">
+          <div class="card_dado_rapido">
             <span>Geração diária estimada</span>
             <span>${geracaoRealMedia.toFixed(2)} kWh</span>
           </div>
-          <div class="resultCard">
+          <div class="card_dado_rapido">
             <span>Perda estimada por sujeira</span>
             <span>${perdaPercentual.toFixed(2)}%</span>
           </div>
-          <div class="resultCard">
+          <div class="card_dado_rapido">
             <span>Impato financeiro mensal</span>
             <span>R$ ${impactoFinanceiroMensal.toFixed(2)}</span>
           </div>

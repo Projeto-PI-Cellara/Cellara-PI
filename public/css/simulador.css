@@ -1,37 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-  --preto: #000000;
-  --branco: #FFFFFF;
-  --primaria: #2B3B92;
-  --secundaria:  #F8F9FA;
-  --destaque: #FFD700;
-  --preto-suporte: #1C1C1C;
+  --branco: #FAFCFB;
+  --branco_gelo: #E9EBF5;
+  --amarelo_claro: #FFD700;
+  --amarelo_escuro: #D4AF37;
+  --azul_claro: #4A58A2;
+  --azul_escuro: #2B3B92;
+  --preto: #1C1C1C;
+
+  --azul_escuro_transparente: #2B3B92B3;
+  --preto-sombra: #00000066;
 }
 
-h2 {
-  text-align: center;
-  gap: 10px;
-  color: var(--primaria);
-}
-
-.card {
+.card_simulador {
   display: flex;
   flex-direction: column;
-  /* background-color: var(--branco); */
   padding: 30px;
-  width: 70%;
-  /* height: fit-content; */
   border-radius: 10px;
-  border: solid var(--primaria) 2px;
-  box-shadow: 10px 10px 10px #808080;
+  border: solid var(--azul_escuro) 2px;
+  box-shadow: 10px 10px 10px var(--preto-sombra);
   gap: 25px;
+  background-color: var(--branco);
 }
 
-.card .content {
+.card_simulador h2 {
+  text-align: center;
+  gap: 10px;
+  color: var(--azul_escuro);
+}
+
+.card_simulador h2 span {
+  color: var(--amarelo_escuro);
+}
+
+
+
+/* FORMULÁRIO */
+
+.card_simulador .formulario {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
+}
+
+.card_simulador .formulario h3 {
+  font-weight: bold;
+  color: var(--azul_escuro);
+}
+
+.card_simulador .formulario span {
+  color: var(--amarelo_escuro);
 }
 
 #info {
@@ -40,33 +59,29 @@ h2 {
   gap: 5px;
   margin-top: 5px;
   font-size: 14px;
-  color: var(--primaria);
+  color: var(--azul_escuro);
 }
 
 #info img {
   width: 20px;
 }
 
-label {
-  font-weight: bold;
-  color: var(--primaria);
-}
-
-label span {
-  color: var(--destaque);
-}
-
-input, select {
+.card_simulador .formulario input,
+.card_simulador .formulario select {
   padding: 8px;
   box-sizing: border-box;
   width: 100%;
   border-radius: 5px;
-  border: solid 1px var(--primaria);
+  border: solid 1px var(--azul_escuro);
 }
 
-button {
-  background-color: var(--primaria);
-  color: var(--secundaria);
+
+
+/* BOTÃO DA CALCULADORA */
+
+.card_simulador button {
+  background-color: var(--azul_escuro);
+  color: var(--branco);
   padding: 10px;
   cursor: pointer;
   border: none;
@@ -74,49 +89,52 @@ button {
   border-radius: 10px;
 }
 
-.resultSimulation {
+
+
+/* RESULTADO */
+
+.card_simulador .resultado {
   display: flex;
   flex-direction: column;
   gap: 20px;
   border-radius: 5px;
-  color: var(--primaria);
+  color: var(--azul_escuro);
   font-weight: 600;
 }
 
-.resultSimulation span {
+.card_simulador .resultado span {
   font-weight: bold;
-} 
-
-.resultSimulation .geracao {
-  color: var(--destaque);
 }
 
-.resultSimulation .perda {
+.card_simulador .resultado .geracao {
+  color: var(--amarelo_escuro);
+}
+
+.card_simulador .resultado .perda {
   color: #ff2424;
 }
 
-
 #pMessage {
-  color: var(--destaque);
+  color: var(--amarelo_escuro);
   text-align: center;
   font-weight: bold;
 }
 
-.resultHeader {
+.card_simulador .resultado .dados_rapidos {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-.resultCard {
+.card_simulador .resultado .card_dado_rapido {
   display: flex;
   width: 100%;
   flex-direction: column;
-  background-color: var(--primaria);
+  background-color: var(--azul_escuro);
   align-items: center;
   padding: 10px 5px;
   border-radius: 5px;
-  color: var(--secundaria);
+  color: var(--branco);
   font-weight: bold;
   font-size: 14px;
 }
