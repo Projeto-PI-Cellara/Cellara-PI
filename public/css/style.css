@@ -221,6 +221,16 @@ nav {
   right: 100px;
 }
 
+.secao_desafio_atual {
+  display: flex;
+  height: 100vh;
+  min-height: 800px;
+}
+
+.titulo_conteudo span{
+  color: var(--amarelo_claro);
+}
+
 
 /* SEÇÃO SOBRE O PROJETO */
 
