@@ -1,5 +1,5 @@
-<p align="center">
-  <img src="assets/logoSemFundo.png" alt="Logo Cellara" width="180"/>
+<p>
+  <img src="public/assets/img/logo_texto_light.png" alt="Logo Cellara" width="180"/>
 </p>
 
 # ☀️ Cellara
