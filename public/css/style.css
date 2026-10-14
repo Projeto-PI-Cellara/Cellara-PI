@@ -227,9 +227,28 @@ nav {
   min-height: 800px;
 }
 
-.titulo_conteudo span{
+.titulo_conteudo span {
   color: var(--amarelo_claro);
 }
+
+.corte_lateral_conteudo {
+  padding-inline: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.corte_lateral_conteudo h2 {
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.corte_lateral_conteudo p {
+  font-size: 30px;
+  font-weight: 350;
+}
+
+
 
 
 /* SEÇÃO SOBRE O PROJETO */
