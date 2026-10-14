@@ -257,6 +257,91 @@ header {
   /* text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5); */
 }
 
+/*SECAO SOBRE NOS*/
+
+.secao-sobre-nos {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--branco);
+  gap: 23px;
+}
+
+.valores-empresa {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 100px
+}
+
+.valores-empresa h1 {
+  color: var(--azul-primaria);
+  font-size: 44px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cartoes-valores {
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+  padding: 8px;
+}
+
+.valores {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 27px 38px;
+  background-color: var(--azul-primaria);
+  border: 6px solid var(--branco);
+  border-radius: 2%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.valores h2 {
+  display: flex;
+  justify-content: left;
+  color: var(--amarelo-secundaria);
+  font-weight: normal;
+  font-family: 'Poppins', sans-serif;
+}
+
+.valores p {
+  color: var(--branco);
+  font-family: 'Poppins', sans-serif;
+}
+
+.nossa-missao {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 100px 300px;
+  background-color: var(--azul-primaria);
+  width: 100%;
+}
+
+.nossa-missao h1 {
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  color: var(--amarelo-secundaria);
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.nossa-missao p {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  color: var(--branco);
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
 /*SEÇÃO FOOTER*/
 
 .secao-footer {
@@ -287,25 +372,26 @@ header {
 .suporte {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .ouvidoria {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .redes_sociais {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .titulo {
   color: var(--branco);
   font-size: 24px;
   font-family: "League Spartan";
+  text-align: left;
 }
 
 .item_footer {
