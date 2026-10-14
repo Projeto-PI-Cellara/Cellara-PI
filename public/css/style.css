@@ -184,6 +184,16 @@ nav {
 
 
 
+/* SEÇÃO DESAFIO ATUAL */
+
+.secao_desafio_atual {
+  display: flex;
+  height: 100vh;
+  min-height: 800px;
+}
+
+
+
 /* SEÇÃO SOBRE O PROJETO */
 
 .secao_sobre_projeto {
