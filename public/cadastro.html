@@ -2,55 +2,63 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro | Cellara</title>
-    <link rel="shortcut icon" href="assets/img/logo_simples_transparente.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/cadastro.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="/public/js/login_cadastro.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro | Cellara</title>
+  <link rel="shortcut icon" href="assets/img/logo_simples_transparente.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/formulario.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/login_cadastro.js" defer></script>
 </head>
 
 <body>
-
   <header>
     <nav>
       <img src="assets/img/logo_texto_dark.png" alt="logo_header" id="img_logo_menu">
       <div class="itens_menu">
-        <a href="/public/#inicio">Início</a>
-        <a href="/public/#desafio_atual">Desafio atual</a>
-        <a href="/public/#sobre_projeto">Sobre o projeto</a>
-        <a href="/public/#simulador">Simulador</a>
-        <a href="/public/#sobre_nos">Sobre nós</a>
-        <a href="login.html"><button id="btn_login_menu"><img src="assets/icons/icon_log_in.svg" alt="" />Entrar</button></a>
+        <a href="index.html#inicio">Início</a>
+        <a href="index.html#desafio_atual">Desafio atual</a>
+        <a href="index.html#sobre_projeto">Sobre o projeto</a>
+        <a href="index.html#simulador">Simulador</a>
+        <a href="index.html#sobre_nos">Sobre nós</a>
+        <a href="login.html"><button id="btn_login_menu"><img src="assets/icons/icon_log_in.svg" />Entrar</button></a>
       </div>
     </nav>
   </header>
 
-
-    <div class="secao_login">
-        <img id="img_fundo_hero" src="assets/img/fundo_hero.png" alt="">
-        <div class="cartao">
-            <div class="etiqueta">COMECE AGORA</div>
-            <div class="titulo">Crie sua conta</div>
-            <div class="caixa_abas">
-                <div class="aba"><a href="login.html">Entrar</a></div>
-                <div class="aba aba_ativa">Criar conta</div>
-            </div>
-            <label class="rotulo">Nome completo</label>
-            <input type="text" class="campo_texto" placeholder="Seu nome completo" id="ipt_nome">
-            <label class="rotulo">CPF</label>
-            <input type="text" class="campo_texto" placeholder="cpf" id="ipt_cpf">
-            <label class="rotulo">E-mail</label>
-            <input type="email" class="campo_texto" placeholder="voce@empresa.com" id="ipt_email">
-            <label class="rotulo">Senha</label>
-            <input type="password" class="campo_texto" placeholder="Mínimo de 8 caracteres" id="ipt_senha">
-            <label class="rotulo">Código ativação</label>
-            <input type="text" class="campo_texto" placeholder="Código da empresa" id="ipt_codigo_ativacao">
-            <button onclick="cadastrar()" class="botao_principal">Criar conta</button>
-        </div>
+  <div class="secao_formulario">
+    <img id="img_fundo_hero" src="assets/img/fundo_hero.png" alt="">
+    <div class="card_formulario">
+      <div class="etiqueta">COMECE AGORA</div>
+      <h2>Crie sua conta</h2>
+      <div class="abas_formulario">
+        <a href="login.html">Entrar</a>
+        <div>Criar conta</div>
+      </div>
+      <label>
+        <h3>Nome completo</h3>
+        <input type="text" placeholder="Insira seu nome completo" id="ipt_nome">
+      </label>
+      <label>
+        <h3>CPF</h3>
+        <input type="text" placeholder="Insira seu CPF" id="ipt_cpf">
+      </label>
+      <label>
+        <h3>E-mail</h3>
+        <input type="email" placeholder="Insira seu e-mail na empresa" id="ipt_email">
+      </label>
+      <label>
+        <h3>Senha</h3>
+        <input type="password" placeholder="Insira sua senha" id="ipt_senha">
+        <input type="password" placeholder="Confirme sua senha" id="ipt_confirmacao_senha">
+      </label>
+      <label>
+        <h3>Código ativação</h3>
+        <input type="text" placeholder="Insira o código de ativação da sua empresa" id="ipt_codigo_ativacao">
+      </label>
+      <button onclick="cadastrar()" class="botao_final_formulario">Criar conta</button>
     </div>
-
+  </div>
 </body>
 
 </html>

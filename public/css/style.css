@@ -111,6 +111,22 @@ nav {
 
 
 
+/* SEÇÃO DE FORMULÁRIO */
+
+.secao_formulario {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 120px 20px 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: var(--azul_escuro_transparente);
+}
+
+
+
 /* SEÇÃO HERO */
 
 .secao_hero {
