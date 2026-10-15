@@ -34,9 +34,11 @@ function simular() {
     } else if (regiao == "sudeste") {
       irradiancia = 4.93;
       tarifa = 0.79;
-    } else {
+    } else if (regiao == "sul") {
       irradiancia = 4.33;
       tarifa = 0.68;
+    } else {
+      mensagem = `Selecione uma região válida`;
     }
 
     let coefSujeira = 0;
@@ -47,28 +49,38 @@ function simular() {
       coefSujeira = 0.00065;
     } else if (ambiente == "rodovia") {
       coefSujeira = 0.00125;
-    } else {
+    } else if (ambiente == "urbanoAlta") {
       coefSujeira = 0.00175;
+    } else {
+      mensagem = `Selecione um ambiente válido`;
     }
 
     let potenciaTotalKwp = (qtdPainel * potenciaPainel) / 1000;
 
     const diasReferencia = 30;
-    let perdaFinal = diasReferencia * coefSujeira;
-    let perdaMedia = perdaFinal / 2;
-
     const performanceRatio = 0.8;
-    let desempenhoMedioEstimado = performanceRatio * (1 - perdaMedia);
+    const geracaoReferencia = potenciaTotalKwp * irradiancia * performanceRatio;
 
-    let geracaoReferencia = potenciaTotalKwp * irradiancia * performanceRatio;
-    let geracaoRealMedia =
-      potenciaTotalKwp * irradiancia * desempenhoMedioEstimado;
+    let dia = 1;
+    let energiaPerdidaMensal = 0;
 
-    let energiaPerdidaDia = geracaoReferencia - geracaoRealMedia;
+    while (dia <= diasReferencia) {
+      const perdaAcumulada = dia * coefSujeira;
+      const desempenhoDia = performanceRatio * (1 - perdaAcumulada);
+      const geracaoEstimadaDia = potenciaTotalKwp * irradiancia * desempenhoDia;
+      const energiaPerdidaDia = geracaoReferencia - geracaoEstimadaDia;
 
-    let impactoFinanceiroMensal = energiaPerdidaDia * tarifa * 30;
-    let impactoFinanceiroAnual = impactoFinanceiroMensal * 12;
-    let perdaPercentual = perdaMedia * 100;
+      energiaPerdidaMensal += energiaPerdidaDia;
+      dia++;
+    }
+
+    const energiaPerdidaDia = energiaPerdidaMensal / diasReferencia;
+    const geracaoRealMedia = geracaoReferencia - energiaPerdidaDia;
+    const perdaPercentual =
+      (energiaPerdidaMensal / (geracaoReferencia * diasReferencia)) * 100;
+
+    const impactoFinanceiroMensal = energiaPerdidaMensal * tarifa;
+    const impactoFinanceiroAnual = impactoFinanceiroMensal * 12;
 
     divResult.innerHTML = `
       <div class="resultado">
