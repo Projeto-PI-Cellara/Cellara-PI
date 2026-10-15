@@ -8,7 +8,6 @@
   --azul_claro: #4A58A2;
   --azul_escuro: #2B3B92;
   --preto: #1C1C1C;
-
   --azul_escuro_transparente: #2B3B92B3;
   --preto-sombra: #00000066;
 }
@@ -34,8 +33,6 @@
   color: var(--amarelo_escuro);
 }
 
-
-
 /* FORMULÁRIO */
 
 .card_simulador .formulario {
@@ -47,6 +44,7 @@
 .card_simulador .formulario h3 {
   font-weight: bold;
   color: var(--azul_escuro);
+  font-size: 15px;
 }
 
 .card_simulador .formulario span {
@@ -75,8 +73,6 @@
   border: solid 1px var(--azul_escuro);
 }
 
-
-
 /* BOTÃO DA CALCULADORA */
 
 .card_simulador button {
@@ -88,8 +84,6 @@
   font-weight: bold;
   border-radius: 10px;
 }
-
-
 
 /* RESULTADO */
 
