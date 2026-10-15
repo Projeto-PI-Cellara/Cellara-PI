@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="assets/img/logo_simples_transparente.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/cadastro.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="/public/js/login_cadastro.js" defer></script>
 </head>
 
 <body>
@@ -37,16 +38,16 @@
                 <div class="aba aba_ativa">Criar conta</div>
             </div>
             <label class="rotulo">Nome completo</label>
-            <input type="text" class="campo_texto" placeholder="Seu nome completo">
+            <input type="text" class="campo_texto" placeholder="Seu nome completo" id="ipt_nome">
             <label class="rotulo">CPF</label>
-            <input type="text" class="campo_texto" placeholder="cpf">
+            <input type="text" class="campo_texto" placeholder="cpf" id="ipt_cpf">
             <label class="rotulo">E-mail</label>
-            <input type="email" class="campo_texto" placeholder="voce@empresa.com">
+            <input type="email" class="campo_texto" placeholder="voce@empresa.com" id="ipt_email">
             <label class="rotulo">Senha</label>
-            <input type="password" class="campo_texto" placeholder="Mínimo de 8 caracteres">
+            <input type="password" class="campo_texto" placeholder="Mínimo de 8 caracteres" id="ipt_senha">
             <label class="rotulo">Código ativação</label>
-            <input type="text" class="campo_texto" placeholder="Código da empresa">
-            <button type="submit" class="botao_principal">Criar conta</button>
+            <input type="text" class="campo_texto" placeholder="Código da empresa" id="ipt_codigo_ativacao">
+            <button onclick="cadastrar()" class="botao_principal">Criar conta</button>
         </div>
     </div>
 

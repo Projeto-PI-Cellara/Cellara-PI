@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="assets/img/logo_simples_transparente.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="/public/js/login_cadastro.js" defer></script>
 </head>
 
 <body>
@@ -37,10 +38,11 @@
                 <div class="aba"><a href="cadastro.html">Criar conta</a></div>
             </div>
             <label class="rotulo">E-mail</label>
-            <input type="email" class="campo_texto" placeholder="voce@empresa.com">
+            <input type="email" class="campo_texto" placeholder="voce@empresa.com" id="ipt_email_login">
             <label class="rotulo">Senha</label>
-            <input type="password" class="campo_texto" placeholder="Mínimo de 8 caracteres">
-            <button type="submit" class="botao_principal">Acessar plataforma</button>
+            <input type="password" class="campo_texto" placeholder="Mínimo de 8 caracteres" id="ipt_senha_login">
+            <button onclick="login()" class="botao_principal">Acessar plataforma</button>
+            <div ></div>
         </div>
     </div>
 
