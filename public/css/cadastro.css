@@ -1,0 +1,126 @@
+.secao_login {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 120px 20px 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: var(--azul_escuro_transparente);
+}
+
+
+
+.cartao {
+    width: 600px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f7f9fa;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3%;
+    padding: 30px 40px;
+    
+}
+
+
+
+.etiqueta {
+    background-color: #ffd000;
+    color: #000000;
+    font-size: 11px;
+    font-weight: bold;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 12px;
+    width: 170px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+
+.titulo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #111111;
+    margin-bottom: 25px;
+}
+
+
+.caixa_abas {
+    background-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e2e8f0;
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 25px;
+    display: flex;
+}
+
+.aba {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    color: #888888;
+    border-radius: 6px;
+}
+
+.aba a{
+    text-decoration: none;
+    color: #888888;
+}
+
+.aba_ativa {
+    background-color: #2b3b95;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.rotulo {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+
+.campo_texto {
+    width: 100%;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.botao_principal {
+    width: 100%;
+    height: 48px;
+    background-color: #ffd000;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 5px;
+    border-style: solid;
+    border-color: #2b3b95;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    color: #000000;
+    margin-top: 20px;
+}
