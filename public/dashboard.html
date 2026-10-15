@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cellara - Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <h1>Dashboard - Monitoramento de Luminosidade</h1>
+    <div style="display: flex;">
+        <div style="width: 50%;">
+            <canvas id="grafico_resistencia_ldr"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Eixo X: horários
+        const horarios = [
+            '18:20',
+            '18:30',
+            '18:40',
+            '18:50',
+            '19:00',
+            '19:10',
+            '19:20'
+        ]
+
+        // Eixo Y: resistência do LDR do setor 1
+        const resistenciaLdrSetor1 = [
+            0,
+            10,
+            5,
+            2,
+            20,
+            30,
+            45
+        ]
+
+        // Eixo Y: resistência do LDR do setor 2
+        const resistenciaLdrSetor2 = [
+            30,
+            20,
+            10,
+            5,
+            90,
+            80,
+            70
+        ]
+
+        // Construção do gráfico
+        const config = {
+            // Definindo tipo do gráfico
+            type: 'line',
+
+            // Preencher gráfico com os valores
+            data: {
+                // Valores do eixo y
+                labels: horarios,
+
+                // Linhas do gráfico
+                datasets: [
+                    {
+                        // Estilização da linha
+                        label: 'Resistência do sensor LDR do setor 1',
+                        backgroundColor: '#FFBB00',
+                        borderColor: '#DD9900',
+
+                        // Valores da linha (eixo x)
+                        data: resistenciaLdrSetor1,
+                    },
+                    {
+                        // Estilização da linha
+                        label: 'Resistência do sensor LDR do setor 2',
+                        backgroundColor: 'blue',
+                        borderColor: 'blue',
+
+                        // Valores da linha (eixo x)
+                        data: resistenciaLdrSetor2,
+                    }
+                ]
+            },
+
+            // Opções adicionais do gráfico
+            options: {
+                // Unidade de medida
+                scales: {
+                    // Para o eixo y
+                    y: {
+                        // Para cada um dos elementos do eixo
+                        ticks: {
+                            // Inclui a unidade de medida ao lado do número
+                            callback: function (value) {
+                                return value + ' Ω';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Implementação do gráfico no canvas
+        const graficoResistenciaLdr = new Chart(
+            document.getElementById('grafico_resistencia_ldr'),
+            config
+        )
+    </script>
+</body>
+
+</html>
