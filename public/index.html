@@ -1,285 +1,257 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cellara - Site Institucional</title>
-    <link
-      rel="shortcut icon"
-      href="assets/img/logo_simples_transparente.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/simulador.css" />
-    <script src="js/simulador.js" defer></script>
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <a href="/public/#">
-          <img
-            src="assets/img/logo_texto_dark.png"
-            alt="logo_header"
-            id="img_logo_menu"
-          />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cellara - Site Institucional</title>
+  <link rel="shortcut icon" href="assets/img/logo_simples_transparente.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/simulador.css" />
+  <script src="js/simulador.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#inicio">
+        <img src="assets/img/logo_texto_dark.png" alt="logo_header" id="img_logo_menu" />
+      </a>
+      <div class="itens_menu">
+        <a href="#inicio">Início</a>
+        <a href="#desafio_atual">Desafio atual</a>
+        <a href="#sobre_projeto">Sobre o projeto</a>
+        <a href="#simulador">Simulador</a>
+        <a href="#sobre_nos">Sobre nós</a>
+        <a href="login.html">
+          <button id="btn_login_menu">
+            <img src="assets/icons/icon_log_in.svg" alt="" />
+            Entrar
+          </button>
         </a>
-        <div class="itens_menu">
-          <a href="#inicio">Início</a>
-          <a href="#desafio_atual">Desafio atual</a>
-          <a href="#sobre_projeto">Sobre o projeto</a>
-          <a href="#simulador">Simulador</a>
-          <a href="#sobre_nos">Sobre nós</a>
-          <a href="login.html">
-            <button id="btn_login_menu">
-              <img src="assets/icons/icon_log_in.svg" alt="" />
-              Entrar
-            </button>
-          </a>
-        </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-      <div class="secao_hero" id="inicio">
-        <img id="img_fundo_hero" src="assets/img/fundo_hero.png" alt="" />
-        <div class="conteudo_hero">
-          <h1>Maximizando seu aproveitamento de energia solar</h1>
-          <h2>
-            Uma solução tecnológica para auxiliar empresas com usinas solares em
-            análise de aproveitamento ideal de energia gerada.
+  <main>
+    <div class="secao_hero" id="inicio">
+      <img id="img_fundo_hero" src="assets/img/fundo_hero.png" alt="" />
+      <div class="conteudo_hero">
+        <h1>Maximizando seu aproveitamento de energia solar</h1>
+        <h2>
+          Uma solução tecnológica para auxiliar empresas com usinas solares em
+          análise de aproveitamento ideal de energia gerada.
+        </h2>
+        <hr />
+        <div class="botoes_hero">
+          <a href="#sobre_projeto"><button id="btn_hero_sobre_projeto">Conheça o Projeto</button></a>
+          <a href="#simulador"><button id="btn_hero_simulador">Simule aqui</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="divisoria"></div>
+
+    <div class="secao_desafio_atual" id="desafio_atual">
+      <img id="img_fundo_desafio_atual" src="assets/img/fundo_desafio.png" alt="" />
+      <div class="imagens-desafio">
+        <img id="img_desafio1" class="img_desafio" src="assets/img/desafio1.png"
+          alt="Mão suja pela poeira sobre a placa solar" />
+        <img id="img_desafio2" class="img_desafio" src="assets/img/desafio2.png" alt="Limpando placa solar suja" />
+      </div>
+
+      <div class="corte_lateral">
+        <div class="corte_lateral_conteudo">
+          <h2 class="titulo_conteudo">
+            Sua <span>energia</span> pode estar sendo
+            <span>desperdiçada!</span>
           </h2>
-          <hr />
-          <div class="botoes_hero">
-            <a href="#sobre_projeto"
-              ><button id="btn_hero_sobre_projeto">Conheça o Projeto</button></a
-            >
-            <a href="#simulador"
-              ><button id="btn_hero_simulador">Simule aqui</button></a
-            >
-          </div>
-        </div>
-      </div>
+          <p class="paragrafo_conteudo">
+            A sujeira acumulada nas placas solares reduz a quantidade de luz
+            recebida, podendo diminuir a eficiência e geração de energia dos
+            painéis fotovoltaicos.
+          </p>
 
-      <div class="secao_desafio_atual" id="desafio_atual">
-        <img
-          id="img_fundo_desafio_atual"
-          src="assets/img/fundo_desafio.png"
-          alt=""
-        />
-        <div class="imagens-desafio">
-          <img
-            id="img_desafio1"
-            class="img_desafio"
-            src="assets/img/desafio1.png"
-            alt="Mão suja pela poeira sobre a placa solar"
-          />
-          <img
-            id="img_desafio2"
-            class="img_desafio"
-            src="assets/img/desafio2.png"
-            alt="Limpando placa solar suja"
-          />
-        </div>
-
-        <div class="corte_lateral">
-          <div class="corte_lateral_conteudo">
-            <h2 class="titulo_conteudo">
-              Sua <span>energia</span> pode estar sendo
-              <span>desperdiçada!</span>
-            </h2>
-            <p class="paragrafo_conteudo">
-              A sujeira acumulada nas placas solares reduz a quantidade de luz
-              recebida, podendo diminuir a eficiência e geração de energia dos
-              painéis fotovoltaicos.
-            </p>
-
-            <p class="paragrafo_conteudo">
-              É imprescindível a limpeza dos painéis, mas limpar também tem
-              custo. Qual é o momento certo?
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="secao_sobre_projeto" id="sobre_projeto">
-        <div class="corte_lateral">
-          <h2 class="titulo_conteudo">Como funciona o projeto?</h2>
-          <div class="topico_corte">
-            <h3>01 - Instalação</h3>
-            <hr />
-            <p class="paragrafo_conteudo">
-              Sensores são instalados nos painéis solares para coletar
-              informações sobre seu desempenho.
-            </p>
-          </div>
-          <div class="topico_corte">
-            <h3>02 - Monitoramento</h3>
-            <hr />
-            <p class="paragrafo_conteudo">
-              Os dados dos painéis são registrados continuamente.
-            </p>
-          </div>
-          <div class="topico_corte">
-            <h3>03 - Análise</h3>
-            <hr />
-            <p class="paragrafo_conteudo">
-              O sistema identifica alterações no desempenho que podem esar
-              relacionadas ao acúmulo de sujeira.
-            </p>
-          </div>
-          <div class="topico_corte">
-            <h3>04 - Ação</h3>
-            <hr />
-            <p class="paragrafo_conteudo">
-              Com essas informações, o responsável consegue decidir as ações
-              necessárias e que convém com as identificações.
-            </p>
-          </div>
-        </div>
-        <div class="imagem_legendada">
-          <img
-            id="dashboard_ilustrativo"
-            src="assets/img/print_dashboard.png"
-          />
-          <p class="legenda">Imagem ilustrativa do Dashboard</p>
-        </div>
-      </div>
-
-      <div class="secao_simulador" id="simulador">
-        <div class="card_simulador">
-          <h2>Simulador de Eficiência <span>Solar</span></h2>
-          <div class="formulario">
-            <label>
-              <h3>Insira a potência de cada painel (Wp)</h3>
-              <input
-                type="number"
-                id="ipt_potencia_painel"
-                placeholder="ex: 550"
-              />
-              <div id="info">
-                <a
-                  href="https://www.neosolar.com.br/tudo-sobre/placa-solar-fotovoltaica/potencia-tamanho-painel-solar"
-                  target="_blank"
-                >
-                  <img src="assets/icons/icon_info_dark.svg" />
-                </a>
-                <p>
-                  Na ausência do valor, será usado o valor padrão do mercado de
-                  550Wp.
-                </p>
-              </div>
-            </label>
-            <label>
-              <h3>Insira a quantidade de painéis solares <span>*</span></h3>
-              <input type="number" id="ipt_qtd_painel" placeholder="ex: 450" />
-            </label>
-            <label>
-              <h3>Selecione a sua região das instalações <span>*</span></h3>
-              <select id="slt_regiao">
-                <option value="" selected disabled>Selecione uma opção</option>
-                <option value="norte">Norte</option>
-                <option value="nordeste">Nordeste</option>
-                <option value="centroOeste">Centro oeste</option>
-                <option value="sudeste">Sudeste</option>
-                <option value="sul">Sul</option>
-              </select>
-            </label>
-            <label>
-              <h3>Selecione o ambiente das instalações <span>*</span></h3>
-              <select id="slt_ambiente">
-                <option value="" selected disabled>Selecione uma opção</option>
-                <option value="rural">Área Rural _ Isolada</option>
-                <option value="rodovia">
-                  Próximo de Rodovias ou Indústrias
-                </option>
-                <option value="urbanoBaixa">
-                  Zona Urbana de Baixa Densidade
-                </option>
-                <option value="urbanoAlta">
-                  Zona Urbana de Alta Densidade / Industrial
-                </option>
-              </select>
-            </label>
-          </div>
-
-          <button onclick="simular()">Simular</button>
-
-          <div id="divResult">
-            <p id="pMessage"></p>
-          </div>
-        </div>
-
-        <div class="anuncio_simulador">
-          <h2>Descubra quanto você pode estar <span>PERDENDO!</span></h2>
-          <p>
-            Informe poucos dados e faça uma simulação do impacto que a sujeira
-            pode estar causando na geração de energia da sua usina solar.
+          <p class="paragrafo_conteudo">
+            É imprescindível a limpeza dos painéis, mas limpar também tem
+            custo. Qual é o momento certo?
           </p>
         </div>
       </div>
+    </div>
 
-      <div class="secao_sobre_nos" id="sobre_nos">
-        <div class="valores_empresa">
-          <h2>Valores da empresa</h2>
-          <div class="cards_valores">
-            <div class="card_valor">
-              <img src="assets/icons/icon_eye.svg" alt="" />
-              <h3>Transparência</h3>
-              <p>
-                Tornamos os dados claros e acessíveis para auxiliar nossos
-                clientes na tomada de decisões.
-              </p>
-            </div>
+    <div class="divisoria"></div>
 
-            <div class="card_valor">
-              <img src="assets/icons/icon_rings.svg" alt="" />
-              <h3>Colaboração</h3>
-              <p>
-                Trabalhamos junto aos clientes para desenvolver e validar nossas
-                soluções.
-              </p>
-            </div>
-
-            <div class="card_valor">
-              <img src="assets/icons/icon_target.svg" alt="" />
-              <h3>Precisão</h3>
-              <p>
-                Baseamos cada análise em dados coletados diretamente dos
-                painéis, não em suposições..
-              </p>
-            </div>
-
-            <div class="card_valor">
-              <img src="assets/icons/icon_check.svg" alt="" />
-              <h3>Eficiência</h3>
-              <p>
-                Ajudamos os clientes a identificar perdas a tempo de agir e
-                aproveitar melhor o potencial da usina.
-              </p>
-            </div>
-          </div>
-
-          <div id="sol"></div>
+    <div class="secao_sobre_projeto" id="sobre_projeto">
+      <div class="corte_lateral">
+        <h2 class="titulo_conteudo">Como funciona o projeto?</h2>
+        <div class="topico_corte">
+          <h3>01 - Instalação</h3>
+          <hr />
+          <p class="paragrafo_conteudo">
+            Sensores são instalados nos painéis solares para coletar
+            informações sobre seu desempenho.
+          </p>
         </div>
-
-        <div class="nossa_missao">
-          <h2>Nossa Missão</h2>
-          <p>
-            Informe poucos dados e faça uma simulação do impacto que a sujeira
-            pode estar causando na geração de energia da sua usina solar.
+        <div class="topico_corte">
+          <h3>02 - Monitoramento</h3>
+          <hr />
+          <p class="paragrafo_conteudo">
+            Os dados dos painéis são registrados continuamente.
+          </p>
+        </div>
+        <div class="topico_corte">
+          <h3>03 - Análise</h3>
+          <hr />
+          <p class="paragrafo_conteudo">
+            O sistema identifica alterações no desempenho que podem esar
+            relacionadas ao acúmulo de sujeira.
+          </p>
+        </div>
+        <div class="topico_corte">
+          <h3>04 - Ação</h3>
+          <hr />
+          <p class="paragrafo_conteudo">
+            Com essas informações, o responsável consegue decidir as ações
+            necessárias e que convém com as identificações.
           </p>
         </div>
       </div>
-    </main>
+      <div class="imagem_legendada">
+        <img id="dashboard_ilustrativo" src="assets/img/print_dashboard.png" />
+        <p class="legenda">Imagem ilustrativa do Dashboard</p>
+      </div>
+    </div>
 
-    <footer>
-      <div class="rodape">
-        <div class="logo_rodape">
-          <img src="assets/img/logo_texto_light.png" alt="Logo da Empresa" />
-          <hr />
+    <div class="secao_simulador" id="simulador">
+      <div class="card_simulador">
+        <h2>Simulador de Eficiência <span>Solar</span></h2>
+        <div class="formulario">
+          <label>
+            <h3>Insira a potência de cada painel (Wp)</h3>
+            <input type="number" id="ipt_potencia_painel" placeholder="ex: 550" />
+            <div id="info">
+              <a href="https://www.neosolar.com.br/tudo-sobre/placa-solar-fotovoltaica/potencia-tamanho-painel-solar"
+                target="_blank">
+                <img src="assets/icons/icon_info_dark.svg" />
+              </a>
+              <p>
+                Na ausência do valor, será usado o valor padrão do mercado de
+                550Wp.
+              </p>
+            </div>
+          </label>
+          <label>
+            <h3>Insira a quantidade de painéis solares <span>*</span></h3>
+            <input type="number" id="ipt_qtd_painel" placeholder="ex: 450" />
+          </label>
+          <label>
+            <h3>Selecione a sua região das instalações <span>*</span></h3>
+            <select id="slt_regiao">
+              <option value="" selected disabled>Selecione uma opção</option>
+              <option value="norte">Norte</option>
+              <option value="nordeste">Nordeste</option>
+              <option value="centroOeste">Centro oeste</option>
+              <option value="sudeste">Sudeste</option>
+              <option value="sul">Sul</option>
+            </select>
+          </label>
+          <label>
+            <h3>Selecione o ambiente das instalações <span>*</span></h3>
+            <select id="slt_ambiente">
+              <option value="" selected disabled>Selecione uma opção</option>
+              <option value="rural">Área Rural _ Isolada</option>
+              <option value="rodovia">
+                Próximo de Rodovias ou Indústrias
+              </option>
+              <option value="urbanoBaixa">
+                Zona Urbana de Baixa Densidade
+              </option>
+              <option value="urbanoAlta">
+                Zona Urbana de Alta Densidade / Industrial
+              </option>
+            </select>
+          </label>
         </div>
 
+        <button onclick="simular()">Simular</button>
+
+        <div id="divResult">
+          <p id="pMessage"></p>
+        </div>
+      </div>
+
+      <div class="anuncio_simulador">
+        <h2>Descubra quanto você pode estar <span>PERDENDO!</span></h2>
+        <p>
+          Informe poucos dados e faça uma simulação do impacto que a sujeira
+          pode estar causando na geração de energia da sua usina solar.
+        </p>
+      </div>
+    </div>
+
+    <div class="secao_sobre_nos" id="sobre_nos">
+      <div class="valores_empresa">
+        <h2>Valores da empresa</h2>
+        <div class="cards_valores">
+          <div class="card_valor">
+            <img src="assets/icons/icon_eye.svg" alt="" />
+            <h3>Transparência</h3>
+            <p>
+              Tornamos os dados claros e acessíveis para auxiliar nossos
+              clientes na tomada de decisões.
+            </p>
+          </div>
+
+          <div class="card_valor">
+            <img src="assets/icons/icon_rings.svg" alt="" />
+            <h3>Colaboração</h3>
+            <p>
+              Trabalhamos junto aos clientes para desenvolver e validar nossas
+              soluções.
+            </p>
+          </div>
+
+          <div class="card_valor">
+            <img src="assets/icons/icon_target.svg" alt="" />
+            <h3>Precisão</h3>
+            <p>
+              Baseamos cada análise em dados coletados diretamente dos
+              painéis, não em suposições..
+            </p>
+          </div>
+
+          <div class="card_valor">
+            <img src="assets/icons/icon_check.svg" alt="" />
+            <h3>Eficiência</h3>
+            <p>
+              Ajudamos os clientes a identificar perdas a tempo de agir e
+              aproveitar melhor o potencial da usina.
+            </p>
+          </div>
+        </div>
+
+        <div id="sol"></div>
+      </div>
+
+      <div class="nossa_missao">
+        <h2>Nossa Missão</h2>
+        <p>
+          Informe poucos dados e faça uma simulação do impacto que a sujeira
+          pode estar causando na geração de energia da sua usina solar.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="rodape">
+      <div class="logo_rodape">
+        <img src="assets/img/logo_texto_light.png" alt="Logo da Empresa" />
+        <hr />
+      </div>
+
+      <div class="conteudo_rodape">
         <div class="campo_rodape">
           <h2>SUPORTE</h2>
 
@@ -309,16 +281,15 @@
           <div id="icones_rodape">
             <img src="assets/icons/icon_facebook.png" alt="Logo do Facebook" />
             <img src="assets/icons/icon_x.png" alt="Logo do X" />
-            <img
-              src="assets/icons/icon_instagram.png"
-              alt="Logo do Instagram"
-            />
+            <img src="assets/icons/icon_instagram.png" alt="Logo do Instagram" />
             <img src="assets/icons/icon_tiktok.png" alt="Logo do TikTok" />
           </div>
         </div>
-
-        <p id="direitos_autorais">@ 2026 Cellara</p>
       </div>
-    </footer>
-  </body>
+
+      <p id="direitos_autorais">@ 2026 Cellara</p>
+    </div>
+  </footer>
+</body>
+
 </html>
