@@ -8,6 +8,9 @@ function login() {
     if (email == "" || !email.includes("@")) {
         alert("E-mail inválido! O e-mail deve conter pelo menos um '@'.")
         erro = true
+    }else if(senha == ""){
+        alert("A senha está vazia")
+        erro = true
     }
 
     if (!erro) {

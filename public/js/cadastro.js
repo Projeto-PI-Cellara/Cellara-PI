@@ -25,6 +25,11 @@ function cadastrar() {
         erro = true
     }
 
+    if (!email.includes("@")) {
+    alert("E-mail inválido! O e-mail deve conter pelo menos um '@'.")
+    erro = true
+    }
+
     if (senha != confirmacaoSenha) {
         alert("As senhas inseridas não condizem.")
         erro = true
