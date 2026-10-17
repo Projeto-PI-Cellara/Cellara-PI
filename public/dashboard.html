@@ -12,46 +12,102 @@
     <h1>Dashboard - Monitoramento de Luminosidade</h1>
     <div style="display: flex;">
         <div style="width: 50%;">
-            <canvas id="grafico_resistencia_ldr"></canvas>
+            <canvas id="grafico_irradiancia_line"></canvas>
+        </div>
+        <div style="width: 50%;">
+            <canvas id="grafico_geracao_ideal_bar"></canvas>
+        </div>
+        <div style="width: 50%;">
+            <canvas id="grafico_geracao_ideal_pie"></canvas>
         </div>
     </div>
+
+
 
     <script>
         // Eixo X: horários
         const horarios = [
-            '18:20',
-            '18:30',
-            '18:40',
-            '18:50',
-            '19:00',
-            '19:10',
-            '19:20'
+            '04h',
+            '05h',
+            '06h',
+            '07h',
+            '08h',
+            '09h',
+            '10h',
+            '11h',
+            '12h',
+            '13h',
+            '14h',
+            '15h',
+            '16h',
+            '17h',
+            '18h',
+            '19h'
         ]
 
         // Eixo Y: resistência do LDR do setor 1
-        const resistenciaLdrSetor1 = [
+        const valores1IrradianciaLine = [
             0,
-            10,
-            5,
-            2,
-            20,
-            30,
-            45
+            90,
+            180,
+            350,
+            550,
+            800,
+            850,
+            950,
+            900,
+            850,
+            900,
+            800,
+            600,
+            350,
+            100,
+            0
+
+
+
         ]
 
         // Eixo Y: resistência do LDR do setor 2
-        const resistenciaLdrSetor2 = [
-            30,
-            20,
-            10,
-            5,
-            90,
-            80,
-            70
-        ]
+        const valores2IrradianciaLine = [
+            0,
+            50,
+            100,
+            250,
+            350,
+            450,
+            650,
+            800,
+            850,
+            750,
+            650,
+            550,
+            400,
+            250,
+            100,
+            0
 
+        ]
+        const valores3IrradianciaLine = [
+            0,
+            60,
+            120,
+            300,
+            450,
+            550,
+            650,
+            750,
+            900,
+            950,
+            850,
+            700,
+            550,
+            400,
+            150,
+            0
+        ]
         // Construção do gráfico
-        const config = {
+        const configIrradianciaLine = {
             // Definindo tipo do gráfico
             type: 'line',
 
@@ -64,21 +120,33 @@
                 datasets: [
                     {
                         // Estilização da linha
-                        label: 'Resistência do sensor LDR do setor 1',
+                        label: 'Setor 1',
                         backgroundColor: '#FFBB00',
                         borderColor: '#DD9900',
+                        tension: 0.5,
 
                         // Valores da linha (eixo x)
-                        data: resistenciaLdrSetor1,
+                        data: valores1IrradianciaLine,
                     },
                     {
                         // Estilização da linha
-                        label: 'Resistência do sensor LDR do setor 2',
+                        label: 'Setor 2',
                         backgroundColor: 'blue',
                         borderColor: 'blue',
+                        tension: 0.5,
 
                         // Valores da linha (eixo x)
-                        data: resistenciaLdrSetor2,
+                        data: valores2IrradianciaLine,
+                    },
+                    {
+                        // Estilização da linha
+                        label: 'Setor 3',
+                        backgroundColor: 'red',
+                        borderColor: 'red',
+                        tension: 0.5,
+
+                        // Valores da linha (eixo x)
+                        data: valores3IrradianciaLine,
                     }
                 ]
             },
@@ -93,7 +161,7 @@
                         ticks: {
                             // Inclui a unidade de medida ao lado do número
                             callback: function (value) {
-                                return value + ' Ω';
+                                return value + ' W/m²';
                             }
                         }
                     }
@@ -102,10 +170,143 @@
         }
 
         // Implementação do gráfico no canvas
-        const graficoResistenciaLdr = new Chart(
-            document.getElementById('grafico_resistencia_ldr'),
-            config
+        const graficoIrradianciaLine = new Chart(
+            document.getElementById('grafico_irradiancia_line'),
+            configIrradianciaLine
         )
+
+        //grafico2
+        // Eixo X: setores
+
+        const setores = [
+            'Setor 1',
+            'Setor 2',
+            'Setor 3'
+        ]
+
+        // Eixo Y: geração ideal de cada setor
+        const valores1GeracaoIdealBar = [
+            1.7,
+            0.9,
+            1.2
+        ]
+
+        // Construção do gráfico
+        const configGeracaoIdealBar = {
+            // Definindo tipo do gráfico
+            type: 'bar',
+
+            // Preencher gráfico com os valores
+            data: {
+                // Valores do eixo y
+                labels: setores,
+
+                // Linhas do gráfico
+                datasets: [
+                    {
+                        // Estilização da linha
+                        label: "Geração de energia ideal por setor",
+                        backgroundColor: [
+                            '#FFBB00',
+                            'blue',
+                            'red'
+                        ],
+                        borderColor: [
+                            '#DD9900',
+                            '#000099',
+                            '#990000'
+                        ],
+                        borderWidth: 5,
+
+
+                        // Valores da linha (eixo x)
+                        data: valores1GeracaoIdealBar,
+                    }
+
+                ]
+            },
+
+            // Opções adicionais do gráfico
+            options: {
+                // Unidade de medida
+                scales: {
+                    // Para o eixo y
+                    y: {
+                        // Para cada um dos elementos do eixo
+                        ticks: {
+                            // Inclui a unidade de medida ao lado do número
+                            callback: function (value) {
+                                return value + ' kWh';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Implementação do gráfico no canvas
+        const graficoGeracaoIdealBar = new Chart(
+            document.getElementById('grafico_geracao_ideal_bar'),
+            configGeracaoIdealBar
+        )
+
+        // Grafico 3
+
+        // Construção do gráfico
+        const configGeracaoIdealPie = {
+            // Definindo tipo do gráfico
+            type: 'pie',
+
+            // Preencher gráfico com os valores
+            data: {
+                // Valores do eixo y
+                labels: setores,
+
+                // Linhas do gráfico
+                datasets: [
+                    {
+                        // Estilização da linha
+                        label: "Geração de energia ideal por setor",
+                        backgroundColor: [
+                            '#FFBB00',
+                            'blue',
+                            'red'
+                        ],
+                        borderColor: [
+                            '#DD9900',
+                            '#000099',
+                            '#990000'
+                        ],
+
+
+                        // Valores da linha (eixo x)
+                        data: valores1GeracaoIdealBar,
+                    }
+
+                ]
+            },
+
+            options: {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const porcentagem = (context.parsed / total * 100).toFixed(1);
+                                return `${context.label}: ${porcentagem}%`;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Implementação do gráfico no canvas
+        const graficoGeracaoIdealPie = new Chart(
+            document.getElementById('grafico_geracao_ideal_pie'),
+            configGeracaoIdealPie
+        )
+
     </script>
 </body>
 
